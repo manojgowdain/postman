@@ -1,0 +1,42 @@
+info:
+  name: unikit server api
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: http://iot-gateway.skoegle.co.in/iot/liv/unikit
+  body:
+    type: text
+    data: |-
+      device_id[1]{0:s}:
+      IMEI867860089552854
+      userId[1]{0:s}:
+      USER-5F49F29E
+      last_heart_rate[1]{0:n}:
+      72
+      last_heart_rate_measured_at[1]{0:td}:
+      03032026085000
+      heart_rate_alert[1]{0:b}:
+      false
+      fall_detected[1]{0:b}:
+      false
+      sos[1]{0:b}:
+      false
+      latitude[1]{0:n}:
+      13.9716
+      longitude[1]{0:n}:
+      77.5946
+      location_measured_at[1]{0:td}:
+      11052026085000
+      battery[1]{0:n}:
+      100
+      imu_xyz[1]{0:a}:
+      [22.8,33.6,44.7]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
