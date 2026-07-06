@@ -1,0 +1,23 @@
+info:
+  name: Set Staff Active Status
+  type: http
+  seq: 14
+http:
+  method: PUT
+  url: "{{apiBaseUrl}}/staff/profile/STF-12345"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: "Bearer {{token}}"
+  body:
+    type: json
+    data: |
+      {
+        "active": false
+      }
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

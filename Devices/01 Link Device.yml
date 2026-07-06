@@ -1,0 +1,22 @@
+info:
+  name: Link Device
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: "{{apiBaseUrl}}/devices/link"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+        "userId": "USER-18C6FC2F",
+        "deviceId": "DEV-1001"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

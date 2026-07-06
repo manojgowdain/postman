@@ -1,0 +1,22 @@
+info:
+  name: Verify Password Reset OTP
+  type: http
+  seq: 9
+http:
+  method: POST
+  url: "{{apiBaseUrl}}/users/forgot-password/verify-otp"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+        "userId": "USER-9293F4A7",
+        "otp": "594928"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

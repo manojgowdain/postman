@@ -1,0 +1,24 @@
+info:
+  name: Update User
+  type: http
+  seq: 6
+http:
+  method: PUT
+  url: "{{apiBaseUrl}}/users/user/USER-8F608BC8"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+        "age": 28,
+        "weight": 72,
+        "bloodGroup": "O+",
+        "activity": "running"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,30 @@
+info:
+  name: Update Staff Profile
+  type: http
+  seq: 12
+http:
+  method: PUT
+  url: "{{apiBaseUrl}}/staff/profile/STAFF-ID-HERE"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: "Bearer {{token}}"
+  body:
+    type: json
+    data: |
+      {
+        "firstName": "Manoj",
+        "lastName": "Gowda",
+        "email": "manoj@gmail.com",
+        "phoneNumber": "9876543210",
+        "department": "IT",
+        "designation": "Software Developer",
+        "userType": "admin",
+        "active": true
+      }
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

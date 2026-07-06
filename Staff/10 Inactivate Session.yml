@@ -1,0 +1,23 @@
+info:
+  name: Inactivate Selected Session
+  type: http
+  seq: 10
+http:
+  method: POST
+  url: "{{apiBaseUrl}}/staff/sessions/inactive"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: "Bearer {{token}}"
+  body:
+    type: json
+    data: |
+      {
+        "sessionToken": "abc123"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

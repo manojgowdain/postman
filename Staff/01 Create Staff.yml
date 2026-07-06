@@ -1,0 +1,29 @@
+info:
+  name: Create Staff
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: "{{apiBaseUrl}}/staff/signup"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+        "firstName": "Priya",
+        "lastName": "Sharma",
+        "email": "priya.admin@example.com",
+        "phoneNumber": "9000022222",
+        "password": "Admin@123",
+        "gender": "female",
+        "department": "Operations",
+        "designation": "Operations Manager",
+        "userType": "admin"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,23 @@
+info:
+  name: Delete Staff
+  type: http
+  seq: 7
+http:
+  method: DELETE
+  url: "{{apiBaseUrl}}/staff/profile"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: "Bearer {{token}}"
+  body:
+    type: json
+    data: |
+      {
+        "staffIds": ["123", "124", "125"]
+      }
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

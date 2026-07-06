@@ -1,0 +1,25 @@
+info:
+  name: Create Ticket
+  type: http
+  seq: 2
+http:
+  method: POST
+  url: "{{ticketBaseUrl}}/tickets"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+        "staffId": 45,
+        "userName": "Manoj Gowda",
+        "userId": "USR1023",
+        "userDevice": "iPhone 15",
+        "source": "mobile_app"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

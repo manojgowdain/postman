@@ -1,0 +1,23 @@
+info:
+  name: Logout Selected Session
+  type: http
+  seq: 9
+http:
+  method: POST
+  url: "{{apiBaseUrl}}/staff/logout-session"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: "Bearer {{token}}"
+  body:
+    type: json
+    data: |
+      {
+        "sessionToken": "abc123"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

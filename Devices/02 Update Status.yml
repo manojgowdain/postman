@@ -1,0 +1,22 @@
+info:
+  name: Update Device Status
+  type: http
+  seq: 2
+http:
+  method: POST
+  url: "{{apiBaseUrl}}/devices/status/update"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+        "userId": "USER-18C6FC2F",
+        "status": "UNLINKED"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

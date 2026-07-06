@@ -1,0 +1,17 @@
+info:
+  name: Update Ticket Status
+  type: http
+  seq: 4
+http:
+  method: PUT
+  url: "{{ticketBaseUrl}}/12345/status"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: "Bearer {{token}}"
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

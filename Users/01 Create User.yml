@@ -1,0 +1,40 @@
+info:
+  name: Create User
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: "{{apiBaseUrl}}/users/signup/create"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+        "firstName": "Manoj",
+        "lastName": "Gowda",
+        "email": "mansosj@gmail.com",
+        "password": "MyStrongPassword123",
+        "gender": "male",
+        "age": 25,
+        "height": 175,
+        "weight": 72,
+        "bloodGroup": "O+",
+        "refreshRateHr": 30,
+        "emergencyContacts": [{"name": "Ramesh", "phone": "9876543210"}],
+        "phoneNumber": "9876543210",
+        "address": "Bengaluru",
+        "activity": "Active",
+        "foodAllergies": ["Peanuts"],
+        "medicineAllergies": ["Penicillin"],
+        "hospitalInfo": {"hospitalName": "Apollo"},
+        "insuranceInfo": {"provider": "LIC"},
+        "socialBenefits": {"scheme": "Ayushman"},
+        "deviceId": "DEVICE123"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
