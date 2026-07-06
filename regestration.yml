@@ -1,0 +1,22 @@
+info:
+  name: regestration
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: https://iot-gateway.skoegle.co.in/iot/liv/unikit?deviceid=IMEI867860089552854&message=working-ok
+  params:
+    - name: deviceid
+      value: IMEI867860089552854
+      type: query
+    - name: message
+      value: working-ok
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
